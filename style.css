@@ -76,13 +76,12 @@ nav {
   color: rgb(253, 205, 137);
   text-shadow: 30px 17px 18px rgba(0, 0, 0, 0.757);
   font-weight: bold;
-  padding-left: 290px;
   padding-top: 100px;
   padding-bottom: 30px;
 }
 .main {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-evenly;
 }
 
@@ -90,7 +89,7 @@ nav {
   width: 85%;
   height: 700px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   background: #212020;
   border-radius: 16px;
   margin: 30px 0;
@@ -183,7 +182,6 @@ nav {
   color: rgb(239, 150, 132);
   text-shadow: 30px 17px 20px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  padding-left: 300px;
   padding-top: 90px;
   padding-bottom: 30px;
 }
@@ -199,7 +197,7 @@ nav {
   width: 85%;
   height: 700px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   background: #161515;
   border-radius: 16px;
   margin: 30px 0;
@@ -378,11 +376,11 @@ button:hover {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background-color: #596be0;
+  background-color: #2b47fd;
   color: white;
   padding: 19px 36px;
   border-radius: 50px;
-  box-shadow: 0 8px 20px rgb(79 70 229 / 0.5);
+  box-shadow: 0 8px 20px rgba(108, 101, 245, 0.5);
   font-weight: 600;
   cursor: pointer;
   z-index: 1050;
@@ -451,7 +449,16 @@ footer a:hover {
 
 .footer-section ul li {
   margin: 5px 0;
+  list-style: none;
 }
+
+.list-unstyled a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
 
 .footer-section ul li a {
   color: #ccc;
