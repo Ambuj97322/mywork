@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <center><title>Contact | Wahaan</title></center>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+      padding: 40px 20px;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 30px 25px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .contact-form button {
+      background-color: #333;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .contact-form button:hover {
+      background-color: #ff6600;
+    }
+
+    img:hover {
+      transition: transform 0.4s ease-in;
+      transform: scale(1.05);
+    }
+
+    .main {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: rgba(
+        255,
+        255,
+        255,
+        0.8
+      ); /* Optional: semi-transparent */
+      padding: 15px;
+      border-radius: 10px;
+      width: 20%;
+      height: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    input,
+    textarea {
+      color: #000;
+      background-color: #fff;
+    }
+  </style>
+  <body>
+ <!-- Responsive Navbar with Dropdown -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-earth-europe"></i> Wahaan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="rental.html">Rental</a></li>
+              <li><a class="dropdown-item" href="washing.html">Washing</a></li>
+              <li><a class="dropdown-item" href="repairs .html">Repairs</a></li>
+              <li><a class="dropdown-item" href="emergency.html">Emergency Help</a></li>
+              <li><a class="dropdown-item" href="custom.html">Custom Service</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
+              <li><a class="dropdown-item" href="cars.html">Car</a></li>
+              <li><a class="dropdown-item" href="ev.html">EV</a></li>
+              <li><a class="dropdown-item" href="premium.html">Premium</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="offers.html">Offers <span class="badge bg-danger">New</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <center>
+      <h2 class="titlebar">
+        <a href="#"><i class="fa-solid fa-phone"></i></a> Contact Us
+      </h2>
+    </center>
+    <div class="form-container">
+      <img src="Pics/BIKE4.png" alt="" />
+      <form class="contact-form">
+        <h2>Contact Us</h2>
+
+        <label for="name"><b>First Name</b></label>
+        <input type="text" id="name" name="name" placeholder="Your Name" />
+
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" name="email" placeholder="Your Email" />
+
+        <label for="message"><b>Message</b></label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <!-- BLOG SECTION -->
+
+    <center>
+      <h2 class="titlebar blog">BlogS <i class="fa-solid fa-pen-nib"></i></h2>
+    </center>
+    <div class="main">
+      <div class="card">
+        <img
+          class="image"
+          src="Pics/travel.png"
+          alt="Best Road Trips in India"
+        />
+        <h3>Top 10 Road Trips</h3>
+        <p>
+          Discover scenic highways, must-visit destinations, and hidden gems for
+          your next bike or car adventure.
+        </p>
+        <br />
+        <center><button>Read More</button></center>
+      </div>
+
+      <div class="card">
+        <img
+          class="image"
+          src="Pics/CAR1.png"
+          alt="Car Maintenance Tips"
+        /><br />
+        <h3>Car Maintenance Tips</h3>
+        <p>
+          Learn essential maintenance tips to keep your car running smoothly and
+          efficiently for years.
+        </p>
+        <br />
+        <center><button>Read More</button></center>
+      </div>
+
+      <div class="card">
+        <img
+          class="image"
+          src="Pics/BIKE4.png"
+          alt="Bike Customization Ideas"
+        /><br />
+        <h3>Bike Customization</h3>
+        <p>
+          Explore popular and unique modifications to make your bike stand out
+          on the roads.
+        </p>
+        <br />
+        <center><button>Read More</button></center>
+      </div>
+    </div>
+
+    <hr />
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>
+            <a href="#"><i class="fa-solid fa-earth-europe"></i></a> Wahaan
+          </h3>
+          <p>Feel the Thrill</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a href="#"><i class="fa-solid fa-earth-europe"></i></a> Wahaan .
+        Designed by Asur <a href="#"><i class="fa-solid fa-code"></i></a>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Wahaan</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: transparent;
+        position: relative;
+      }
+
+      /* Fullscreen Background Video */
+      #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+
+      .drift {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        margin: 80px 20px 150px;
+        flex-wrap: wrap;
+        z-index: 1;
+        margin-top: 300px;
+        margin-bottom: 380px;
+      }
+
+      .form-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+      }
+
+      input,
+      textarea {
+        color: #000;
+        background-color: #fff;
+      }
+
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .form-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-container input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #999;
+        border-radius: 5px;
+      }
+
+      .form-container button {
+        padding: 12px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .form-container button:hover {
+        background: #ff6600;
+      }
+
+      .form-container img {
+        width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+      }
+
+      .form-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+      <source
+        src="videos/High Speed Drifting (Chase Car Cuts II).mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+<!-- Responsive Navbar with Dropdown -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-earth-europe"></i> Wahaan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Rental</a></li>
+              <li><a class="dropdown-item" href="#">Washing</a></li>
+              <li><a class="dropdown-item" href="#">Repairs</a></li>
+              <li><a class="dropdown-item" href="#">Emergency Help</a></li>
+              <li><a class="dropdown-item" href="#">Custom Service</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Bike</a></li>
+              <li><a class="dropdown-item" href="#">Car</a></li>
+              <li><a class="dropdown-item" href="#">EV</a></li>
+              <li><a class="dropdown-item" href="#">Premium</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Offers <span class="badge bg-danger">New</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Login Form -->
+    <div class="drift">
+      <div class="form-container">
+        <form>
+          <label for="username"><b>Username</b></label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            required
+          />
+
+          <label for="password"><b>Password</b></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+
+          <button type="submit">Login</button>
+        </form>
+        <p style="text-align: center; color: black">
+          Don't have an account?
+          <a href="signup.html" style="color: black">Sign up here</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>
+            <a href="#"><i class="fa-solid fa-earth-europe"></i></a> Wahaan
+          </h3>
+          <p>Feel the Thrill</p>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a href="#"><i class="fa-solid fa-earth-europe"></i></a> Wahaan .
+        Designed by Asur <a href="#"><i class="fa-solid fa-code"></i></a>
+      </p>
+    </footer>
+  </body>
+</html>

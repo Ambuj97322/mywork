@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wahaan - Emergency Help</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #2c3e50;
+    }
+
+    .page-header {
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+      box-shadow: 0 6px 25px rgba(255, 78, 80, 0.6);
+      margin-bottom: 3rem;
+      border-radius: 0 0 30px 30px;
+    }
+
+    .page-header h1 {
+      font-weight: 700;
+      font-size: 3.5rem;
+      letter-spacing: 2px;
+    }
+
+    .emergency-info {
+      max-width: 800px;
+      margin: 0 auto 3rem auto;
+      background: white;
+      border-radius: 20px;
+      padding: 2.5rem 3rem;
+      box-shadow:
+        8px 8px 20px rgba(0, 0, 0, 0.07),
+        -8px -8px 20px rgba(255, 255, 255, 0.95);
+      text-align: center;
+    }
+
+    .emergency-info h2 {
+      margin-bottom: 1rem;
+      color: #e74c3c;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .emergency-info p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .emergency-buttons .btn {
+      margin: 0.7rem;
+      padding: 1.2rem 2.8rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      box-shadow: 0 6px 15px rgba(255, 78, 80, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .btn-call {
+      background: #e74c3c;
+      color: white;
+      border: none;
+    }
+
+    .btn-call:hover {
+      background: #c0392b;
+      box-shadow: 0 8px 20px rgba(192, 57, 43, 0.7);
+    }
+
+    .btn-message {
+      background: #f39c12;
+      color: white;
+      border: none;
+    }
+
+    .btn-message:hover {
+      background: #d68910;
+      box-shadow: 0 8px 20px rgba(214, 137, 16, 0.7);
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-earth-europe"></i> Wahaan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="rental.html">Rental</a></li>
+              <li><a class="dropdown-item" href="washing.html">Washing</a></li>
+              <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
+              <li><a class="dropdown-item active" href="emergency.html">Emergency Help</a></li>
+              <li><a class="dropdown-item" href="custom.html">Custom Service</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Vehicles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
+              <li><a class="dropdown-item" href="car.html">Car</a></li>
+              <li><a class="dropdown-item" href="ev.html">EV</a></li>
+              <li><a class="dropdown-item" href="premium.html">Premium</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i
+                class="fas fa-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-header" data-aos="fade-up">
+    <div class="container">
+      <h1>Emergency Help</h1>
+      <p>Quick assistance when you need it the most. Reach out now!</p>
+    </div>
+  </header>
+
+  <!-- Emergency Info Section -->
+  <section class="emergency-info" data-aos="fade-up" data-aos-delay="150">
+    <h2>Need Immediate Help?</h2>
+    <p>If you are facing any vehicle emergency, please don't hesitate to contact us immediately. Our team is
+      available 24/7 to provide fast and reliable assistance.</p>
+
+    <div class="emergency-buttons">
+      <a href="tel:+911234567890" class="btn btn-call"><i class="fas fa-phone-alt"></i> Call Emergency Helpline</a>
+      <a href="sms:+911234567890" class="btn btn-message"><i class="fas fa-comment-alt"></i> Send SMS Request</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Wahaan. All rights reserved.</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      once: true,
+    });
+  </script>
+</body>
+
+</html>
