@@ -81,7 +81,6 @@ nav {
 }
 .main {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-evenly;
 }
 
@@ -89,7 +88,6 @@ nav {
   width: 85%;
   height: 700px;
   display: flex;
-  /* flex-wrap: wrap; */
   background: #212020;
   border-radius: 16px;
   margin: 30px 0;
@@ -159,6 +157,84 @@ nav {
 
 .explore-btn:hover {
   background: #d63333;
+}
+
+
+/* Tablets (768px to 1024px) */
+@media (max-width: 1024px) {
+  .car-card {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .car-img img {
+    height: 400px;
+  }
+
+  .car-details {
+    padding: 20px;
+  }
+
+  .car-details h3 {
+    font-size: 35px;
+  }
+
+  .car-details p {
+    font-size: 18px;
+  }
+
+  .explore-btn {
+    width: 100%;
+  }
+
+  .headhai1 h5 {
+    font-size: 50px;
+    margin-left: 0;
+  }
+}
+
+/* Mobiles (max-width: 767px) */
+@media (max-width: 767px) {
+  .car-card {
+    flex-direction: column;
+    padding-left: 0;
+    margin: 20px 10px;
+  }
+
+  .car-img img {
+    height: 250px;
+  }
+
+  .car-details {
+    padding: 15px;
+  }
+
+  .car-details h3 {
+    font-size: 26px;
+  }
+
+  .car-details p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .car-details ul li {
+    font-size: 14px;
+  }
+
+  .explore-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    width: 100%;
+  }
+
+  .headhai1 h5 {
+    font-size: 36px;
+    margin-left: 0;
+    padding-top: 60px;
+  }
 }
 
 #searchbar{
