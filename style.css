@@ -58,7 +58,6 @@ nav {
   color: #fff;
   transition: all 0.3s ease;
   transform: scale(1.09);
-
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -159,7 +158,6 @@ nav {
   background: #d63333;
 }
 
-
 /* Tablets (768px to 1024px) */
 @media (max-width: 1024px) {
   .car-card {
@@ -237,17 +235,17 @@ nav {
   }
 }
 
-#searchbar{
+#searchbar {
   /* width: 100%; */
   height: 200px;
-  background:linear-gradient( 50deg,rgb(22, 21, 21),rgb(159, 34, 34));
+  background: linear-gradient(50deg, rgb(22, 21, 21), rgb(159, 34, 34));
   box-shadow: 20px 30px 10px rgb(36, 31, 31);
   padding: 80px;
   border-radius: 30px;
   /* justify-content: space-between; */
   /* transform: skewy(4deg); */
 }
-#searchbar:hover{
+#searchbar:hover {
   /* transform: rotateY(360deg); */
   transition-duration: 1s;
   box-shadow: 50px 50px 50px rgb(8, 6, 6);
@@ -354,11 +352,11 @@ nav {
   background-color: rgb(29, 28, 28) !important;
   /* border: none !important; */
   transition: transform 0.6s ease, box-shadow 0.6s ease;
-   box-shadow: 30px 40px 20px rgba(2, 2, 2, 0.478);
+  box-shadow: 30px 40px 20px rgba(2, 2, 2, 0.478);
 }
 
 .card:hover {
-   transform: translateY(-10px);
+  transform: translateY(-10px);
   box-shadow: 80px 60px 5px rgba(0, 0, 0, 0.544);
 }
 .card h2 {
@@ -415,8 +413,8 @@ button:hover {
   width: 500px;
   text-align: center;
   /* border: 7px solid #000000; */
- transition: transform 0.6s ease, box-shadow 0.6s ease;
-   box-shadow: 30px 40px 10px rgba(2, 2, 2, 0.478);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 30px 40px 10px rgba(2, 2, 2, 0.478);
 }
 
 .review-card:hover {
@@ -476,7 +474,7 @@ footer {
   text-align: left;
   padding: 20px 10px;
   font-size: 0.9rem;
- padding-top: 60px;
+  padding-top: 60px;
   user-select: none;
 }
 footer a {
@@ -535,7 +533,6 @@ footer a:hover {
   font-size: 20px;
 }
 
-
 .footer-section ul li a {
   color: #ccc;
   text-decoration: none;
@@ -564,9 +561,34 @@ footer a:hover {
   color: #eb1717;
 }
 
+.asur {
+  padding-left: 299px;
+}
 
 @media (min-width: 1400px) {
-    #search .container {
-        max-width: 1420px;
-    }
+  #search .container {
+    max-width: 1420px;
+  }
+}
+@media (max-width: 576px) {
+  .bike-card {
+    width: 100% !important;
+    display: block;
+  }
+
+  .bike-details button {
+    width: 100%;
+  }
+
+  .headhai2 h5 {
+    font-size: 28px;
+  }
+
+  .asur {
+    padding-left: 0px;
+  }
+
+  .chat-button{
+    right: 15px;
+  }
 }
