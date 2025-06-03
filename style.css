@@ -475,7 +475,7 @@ footer {
   padding: 20px 10px;
   font-size: 0.9rem;
   padding-top: 60px;
-  user-select: none;
+  /* user-select: none; */
 }
 footer a {
   color: #ddd;
