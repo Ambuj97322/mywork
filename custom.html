@@ -60,17 +60,12 @@
       border-radius: 15px;
       border: 1.8px solid #ccc;
       transition: all 0.3s ease;
-      box-shadow:
-        inset 2px 2px 5px rgba(255, 255, 255, 0.7),
-        inset -5px -5px 10px rgba(0, 0, 0, 0.05);
-      resize: vertical;
     }
 
     .custom-form input:focus,
     .custom-form textarea:focus,
     .custom-form select:focus {
-      outline: none;
-      border-color: #6a11cb;
+      /* border-color: #6a11cb; */
       box-shadow:
         0 0 8px #6a11cb;
     }
@@ -115,7 +110,6 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
             <ul class="dropdown-menu">
               <!-- <li><a class="dropdown-item" href="rental.html">Rental</a></li> -->
-              <li><a class="dropdown-item" href="washing.html">Washing</a></li>
               <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
               <li><a class="dropdown-item" href="emergency.html">Emergency Help</a></li>
               <li><a class="dropdown-item" href="custom.html">Custom Service</a></li>
@@ -127,7 +121,7 @@
               <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
               <li><a class="dropdown-item" href="cars.html">Car</a></li>
               <li><a class="dropdown-item" href="ev.html">EV</a></li>
-              <!-- <li><a class="dropdown-item" href="premium.html">Premium</a></li> -->
+          
             </ul>
           </li>
           <li class="nav-item">
@@ -163,8 +157,6 @@
 
       <label for="serviceType" class="mt-3">Service Type</label>
       <select id="serviceType" name="serviceType" required>
-        <option value="" disabled selected>Select service type</option>
-        <option value="custom_rental">Custom Rental</option>
         <option value="custom_repair">Custom Repair</option>
         <option value="custom_washing">Custom Washing</option>
         <option value="emergency_help">Emergency Help</option>
@@ -199,8 +191,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 700,
-      once: true,
     });
   </script>
 </body>
