@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Washing Services - Wahaan</title>
+  <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"  rel="stylesheet"/>
+  <link  href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"  rel="stylesheet"/>
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      color: #222;
+    }
+    .nav-link, .navbar-brand {
+      font-weight: 600;
+    }
+    .header-section {
+      background: #007bff;
+      color: white;
+      padding: 70px 0 40px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header-section h1 {
+      font-weight: 800;
+      font-size: 3rem;
+      letter-spacing: 1.5px;
+    }
+    .header-section p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+    .service-detail {
+      background: white;
+      border-radius: 12px;
+      padding: 30px 25px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
+      margin: 0 auto 60px auto;
+    }
+    .service-detail h2 {
+      color: #007bff;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .service-detail p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+    .service-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+    .service-list li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 28px;
+    }
+    /* .service-list li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: #007bff;
+    } */
+    .btn-primary-custom {
+      background-color: #007bff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      margin-top: 25px;
+    }
+    .btn-primary-custom:hover {
+      background-color: #0056b3;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html" ><i class="fas fa-earth-europe"></i> Wahaan</a>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <!-- <li><a class="dropdown-item" href="rental.html">Rental</a></li> -->
+              <li><a class="dropdown-item" href="washing.html">Washing</a></li>
+              <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
+              <li><a class="dropdown-item" href="emergency.html">Emergency Help</a></li>
+              <li><a class="dropdown-item" href="custom.html">Custom Service</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
+              <li><a class="dropdown-item" href="cars.html">Car</a></li>
+              <li><a class="dropdown-item" href="ev.html">EV</a></li>
+              <!-- <li><a class="dropdown-item" href="premium.html">Premium</a></li> -->
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i class="fas fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="header-section" data-aos="fade-down">
+    <h1>Washing & Detailing</h1>
+    <p>Keep your vehicle shining inside and out with our expert washing services</p>
+  </header>
+
+  <!-- Service Details -->
+  <section class="service-detail" data-aos="fade-up">
+    <h2>Our Washing Services Include:</h2>
+    <ul class="service-list">
+      <li>Exterior wash with premium cleaning agents</li>
+      <li>Interior vacuum and upholstery cleaning</li>
+      <li>Full vehicle waxing and polishing</li>
+      <li>Engine bay cleaning</li>
+      <li>Wheel and tire cleaning and shine</li>
+      <li>Glass and mirror polishing</li>
+    </ul>
+    <p>
+      We use eco-friendly products that are gentle on your vehicle's paint and
+      provide a lasting shine. Our skilled team ensures every nook and cranny is spotless.
+    </p>
+    <a href="contact.html" class="btn-primary-custom">Book Your Wash</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>&copy; 2025 Wahaan. All rights reserved.</p>
+      <div>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+   <!-- Floating Customer Care Button -->
+    <button class="chat-button">
+      <i class="fas fa-headset"></i> Chat Support
+    </button>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+  </script>
+</body>
+</html>
