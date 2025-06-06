@@ -21,7 +21,8 @@ body {
 }
 
 nav {
-  background: linear-gradient(60deg, #0f0f0f, #1e1e1e, #ff0000);
+  /* background-color: #000 !important; */
+  background: linear-gradient(200deg, #0f0f0f, #1e1e1e, #ff0000);
   position: fixed !important;
   width: 100%;
   z-index: 9;
@@ -47,13 +48,14 @@ nav {
 }
 
 .btn-outline-primary {
-  background-color: #0d15fd;
+  background-color: #fd0d0d;
   transition: all 0.3s ease;
   color: #fff;
   font-weight: 800;
 }
 .btn-outline-primary:hover {
-  background-color: #0d15fd;
+  background-color: #fd0d0d;
+  border: none;
   color: #fff;
   transition: all 0.3s ease;
   transform: scale(1.09);
