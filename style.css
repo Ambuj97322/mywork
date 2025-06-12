@@ -20,8 +20,8 @@ body {
   z-index: 10;
 }
 
+
 nav {
-  /* background-color: #000 !important; */
   background: linear-gradient(200deg, #0f0f0f, #1e1e1e, #ff0000);
   position: fixed !important;
   width: 100%;
@@ -60,16 +60,10 @@ nav {
   transition: all 0.3s ease;
   transform: scale(1.09);
 }
-.carousel-control-next,
-.carousel-control-prev {
-  width: 20px !important;
-}
-.carousel-caption h5 {
-  font-size: 70px;
-  color: rgb(206, 225, 241);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  font-weight: bold;
-}
+
+
+
+/* Car Section  */
 
 .headhai1 h5 {
   font-size: 70px;
@@ -159,22 +153,45 @@ nav {
   background: #d63333;
 }
 
+/* Search section  */
 
 #searchbar {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: space-between;
   background: linear-gradient(50deg, #ff0000, #1e1e1e, #ff0000);
   box-shadow: 20px 30px 10px rgb(36, 31, 31);
   padding: 50px;
   border-radius: 30px;
+  transition: box-shadow 0.5s ease;
 }
+
 #searchbar:hover {
-  transition-duration: 1s;
+  transition: transform 0.5s ease, box-shadow 0.8s ease;
+  transform: translateY(-10px);
   box-shadow: 50px 50px 50px rgb(8, 6, 6);
 }
 
+.headhai2 h5 {
+  font-size: 60px;
+  color: #ffd17e;
+  text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+/* Fix dropdown text color */
+.custom-select {
+  background-color: #fff;
+  color: #000;
+}
+.custom-select option {
+  color: #000;
+  background-color: #fff;
+}
+
+
+/* Bike Section  */
 .headhai2 h5 {
   font-size: 70px;
   color: rgb(239, 150, 132);
@@ -266,6 +283,18 @@ nav {
   background-color: #d63333;
 }
 
+/* Carousel  */
+.carousel-control-next,
+.carousel-control-prev {
+  width: 20px !important;
+}
+.carousel-caption h5 {
+  font-size: 70px;
+  color: rgb(206, 225, 241);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
 .card {
   width: 25%;
   border-radius: 12px;
@@ -313,12 +342,14 @@ button {
 button:hover {
   background-color: #c41e3a;
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(0.95);
+  box-shadow: 20px 20px 8px rgba(255, 255, 255, 0.2);
   transition: 0.3s;
 }
 
 #bookNow {
   border: none;
+  border-radius: 10px;
   margin-top: 20px;
   width: 100%;
   height: 100px;
