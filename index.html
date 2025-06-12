@@ -146,7 +146,7 @@
         <!-- Search Button -->
         <div class="col-sm-6 col-md-3">
           <!-- <label class="form-label invisible">Search</label> -->
-          <button type="submit" class="btn btn-outline-danger w-100">   <i class="fas fa-search me-1"></i>Search </button>
+          <button type="submit" class="btn btn-outline-danger w-100">  <i class="fas fa-search me-1"></i>Search</button>
         </div>
 
       </form>
@@ -239,6 +239,7 @@
       </button>
     </div>
 
+  
     
   
     <!-- Heading wla 2nd part   -->
@@ -353,10 +354,10 @@
       </div>
     </div> -->
 
-    <div class="headhai2" data-aos="fade-right" data-aos-delay="100" style="margin-left: 200px;">
-        <h5 style="padding-left: 39px">
+    <div class="headhai2" data-aos="fade-right" data-aos-delay="100">
+       <center> <h5>
         What People Say About <i class="fa-solid fa-earth-europe"></i> Wahaan
-      </h5>
+      </h5></center>
     </div>
 
     <!-- Review Cards -->
@@ -479,17 +480,10 @@
 <script>
   $(document).ready(function() {
 
-    // On click of the Explore button
-    $(".explore-btn").click(function(event) {
-      event.preventDefault(); // Prevent link navigation for now
-
-      // Change heading text on click
-      // $(".headhai1 h5").text("Exploring the BMW M5...");
-
-      // You can also animate the heading
-      // $(".headhai1 h5").fadeOut(200).fadeIn(400);
-
-      // Optional: redirect after short delay
+      // Chat button functionality
+      $('.chat-button').on('click', function () {
+        alert('Chat support is currently unavailable.');
+      });
    
 
   });
