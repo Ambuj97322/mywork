@@ -33,9 +33,9 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="rentals.html">Rentals</a></li>
-            <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
-            <li><a class="dropdown-item" href="washing.html">Washing</a></li>
+            <li><a class="dropdown-item" href="sell.html">Sell </a></li>
+            <li><a class="dropdown-item" href="buy.html">Buy </a></li>
+            <li><a class="dropdown-item" href="repairs.html">Repairs & Maintenance</a></li>
             <li><a class="dropdown-item" href="modification.html">Custom Modification</a></li>
           
           </ul>
@@ -90,67 +90,99 @@
       </div>
     </div>
 
+    <!-- Search section  -->
+
 <!-- Heading - Part 2 -->
 <div class="headhai2 text-center" data-aos="fade-right">
   <h5>
-    Search your <i class="fa-solid fa-earth-europe"></i> Wahaan
+    Buy  your <i class="fa-solid fa-earth-europe"></i> Wahaan
   </h5>
 </div>
 
-<!-- Search Section -->
-<section id="search" class="py-5" data-aos="fade-up" data-aos-anchor-placement="top-center">
+
+    <section id="searchbar" data-aos="zoom-in">
+  <div class="searchbar-content">
+    <!-- <h2>Find the Perfect Ride</h2> -->
+    <div class="filters">
+      <select>
+        <option selected disabled>Vehicle Type</option>
+        <option>Car</option>
+        <option>Bike</option>
+        <option>EV</option>
+      </select>
+
+      <select>
+        <option selected disabled>Brand</option>
+        <option>Honda</option>
+        <option>Hyundai</option>
+        <option>Tata</option>
+        <option>BMW</option>
+        <option>Mercedes</option>
+        <option>Volkswagen</option>
+        <option>Mahindra</option>
+      </select>
+
+      <select>
+        <option selected disabled>Fuel Type</option>
+        <option>Petrol</option>
+        <option>Diesel</option>
+        <option>Electric</option>
+      </select>
+
+      <input type="text" placeholder="Search by Model" />
+
+      <select>
+        <option selected disabled>Price Range</option>
+        <option>Below ₹1L</option>
+        <option>₹1L - ₹5L</option>
+        <option>₹5L - ₹10L</option>
+        <option>Above ₹10L</option>
+      </select>
+    </div>
+
+    <button>Search Now</button>
+  </div>
+</section>
+
+
+
+
+ <!-- Buy and Sell Section -->
+  <div class="headhai2 text-center" data-aos="fade-right">
+  <h5>
+    Sell on <i class="fa-solid fa-earth-europe"></i> Wahaan
+  </h5>
+</div>
+<section id="buy-sell" class="py-5 text-light">
   <div class="container">
-    <div id="searchbar" class="rounded-4">
-      <form class="row gx-4 gy-3 align-items-end" action="search_results.html" method="GET">
+    
+    <div class="row align-items-center" data-aos="fade-up">
+      <!-- Image Side -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="car pics/landscape1.jpg" alt="Marketplace" class="img-fluid rounded shadow" />
+      </div>
 
-        <!-- Vehicle Type -->
-        <div class="col-sm-6 col-md-3">
-          <label class="form-label fw-semibold fs-5"><i class="fas fa-car-side me-1"></i>Vehicle Type</label>
-          <select class="form-select custom-select" name="vehicle">
-            <option selected disabled>Select</option>
-            <option>Bike</option>
-            <option>Car</option>
-            <option>EV</option>
-            <option>Truck</option>
-          </select>
-        </div>
-
-        <!-- Brand -->
-        <div class="col-sm-6 col-md-3">
-          <label class="form-label fw-semibold fs-5"><i class="fas fa-industry me-1"></i>Brand</label>
-          <select class="form-select custom-select" name="brand">
-            <option selected disabled>Select</option>
-            <option>Honda</option>
-            <option>Hero</option>
-            <option>TVS</option>
-            <option>Yamaha</option>
-            <option>Maruti</option>
-            <option>Hyundai</option>
-          </select>
-        </div>
-
-
-       
-
-        <!-- Service Type -->
-        <div class="col-sm-6 col-md-3">
-          <label class="form-label fw-semibold fs-5"><i class="fas fa-tools me-1"></i>Service Type</label>
-          <select class="form-select custom-select" name="service">
-            <option selected disabled>Select</option>
-            <option>Repair</option>
-            <option>Washing</option>
-            <option>Custom Modification</option>
-            <option>Emergency Help</option>
-          </select>
-        </div>
-
-        <!-- Search Button -->
-        <div class="col-sm-6 col-md-3">
-          <!-- <label class="form-label invisible">Search</label> -->
-          <button type="submit" class="btn btn-outline-danger w-100">  <i class="fas fa-search me-1"></i>Search</button>
-        </div>
-
-      </form>
+      <!-- Form Side -->
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Your Name" required />
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Item Name (e.g., Royal Enfield Handle)" required />
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control form-control-lg" placeholder="Price (₹)" required />
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control form-control-lg" rows="3" placeholder="Short Description..." required></textarea>
+          </div>
+          <div class="mb-3">
+            <input type="file" class="form-control form-control-lg" accept="image/*" />
+          </div>
+          <button class="btn w-100 fs-5" id="sellNowBtn">Post Ad</button>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -439,11 +471,7 @@
       $('.chat-button').on('click', function () {
         alert('Chat support is currently unavailable.');
       });
-   
-
   });
 </script>
-
-
-  </body>
+</body>
 </html>
