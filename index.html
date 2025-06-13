@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Wahaan</title>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"  rel="stylesheet"  integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"  crossorigin="anonymous"/>
-    <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="  crossorigin="anonymous"  referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wahaan</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"  rel="stylesheet"  integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"  crossorigin="anonymous"/>
+  <link  rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="  crossorigin="anonymous"  referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
   </head>
   <body>
 
@@ -34,9 +33,11 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="rentals.html">Rentals</a></li>
             <li><a class="dropdown-item" href="repairs.html">Repairs</a></li>
-            <li><a class="dropdown-item" href="emergency.html">Emergency Help</a></li>
-            <li><a class="dropdown-item" href="custom.html">Custom Service</a></li>
+            <li><a class="dropdown-item" href="washing.html">Washing</a></li>
+            <li><a class="dropdown-item" href="modification.html">Custom Modification</a></li>
+          
           </ul>
         </li>
 
@@ -110,7 +111,7 @@
             <option>Bike</option>
             <option>Car</option>
             <option>EV</option>
-            <option>Premium</option>
+            <option>Truck</option>
           </select>
         </div>
 
@@ -186,8 +187,7 @@
     </div>
 
 
-    <!-- Heading wla 1st part   -->
-
+<!-- Carousel  -->
     <div class="headhai1" data-aos="fade-down" data-aos-delay="100">
       <center><h5>
         Find your perfect ride with
@@ -195,7 +195,7 @@
       </h5></center>
     </div>
 
-    <!-- Carousel  -->
+    
     <div  id="carouselExampleDark"  class="carousel carousel-dark slide"  data-aos="fade-up">
       <div class="carousel-indicators">
         <button  type="button"  data-bs-target="#carouselExampleDark"  data-bs-slide-to="0"  class="active"  aria-current="true"  aria-label="Slide 1"></button>
@@ -238,41 +238,45 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-
   
-    
   
-    <!-- Heading wla 2nd part   -->
+    <!-- Heading Explore the Services   -->
 
     <div class="headhai2" data-aos="fade-right" data-aos-delay="50">
       <center><h5>
         Explore the Services in <i class="fa-solid fa-earth-europe"></i> Wahaan
       </h5></center>
     </div>
-
-
-
-    <!-- Service Card  -->
-
-    <div class="main" data-aos="fade-up" data-aos-delay="200">
-      <div class="card">
-        <h3 style="color: rgb(209, 199, 0) ; font-size: 50px;">Repair & Maintenance</h3>
-        <!-- <p>Expert service for all bikes and cars.</p> -->
-        <img src="pics/CAR 4.png" alt="" />
+<!-- Explore Services Section -->
+<section class="py-5  text-light">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="fade-up">
+      <!-- Card 1 -->
+      <div class="col-sm-10 col-md-6 col-lg-4 mb-4">
+        <div class="card bg-secondary text-center shadow p-3 h-100">
+          <h4 class="text-warning fs-3 mb-3">Repair & Maintenance</h4>
+          <img src="pics/CAR 4.png" alt="Repair Service" class="img-fluid rounded" />
+        </div>
       </div>
 
-      <div class="card">
-        <h3 style="color: rgb(240, 248, 0 ) ; font-size: 50px;">Custom Modifications</h3>
-        <!-- <p>Personalize your Wahaan with us.</p> -->
-        <img src="Pics/BIKE1.png" alt="" />
+      <!-- Card 2 -->
+      <div class="col-sm-10 col-md-6 col-lg-4 mb-4">
+        <div class="card bg-secondary text-center shadow p-3 h-100">
+          <h4 class="text-warning fs-3 mb-3">Custom Modifications</h4>
+          <img src="Pics/BIKE1.png" alt="Custom Bike" class="img-fluid rounded" />
+        </div>
       </div>
 
-      <div class="card">
-        <h3 style="color: rgb(250, 225, 6) ; font-size: 50px;">Travel Guide</h3>
-        <!-- <p style="color: rgb(251, 252, 245)">Personalize your ride with us.</p> -->
-        <img src="Pics/BIKE4.png" alt="" style="width: 120%" />
+      <!-- Card 3 -->
+      <div class="col-sm-10 col-md-6 col-lg-4 mb-4">
+        <div class="card bg-secondary text-center shadow p-3 h-100">
+          <h4 class="text-warning fs-3 mb-3">Travel Guide</h4>
+          <img src="Pics/BIKE4.png" alt="Travel" class="img-fluid rounded" />
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
        <!-- Heading wla 2nd part   -->
 <div class="headhai2" data-aos="fade-right" data-aos-delay="50"  >
@@ -280,79 +284,44 @@
       Book your Service with  <i class="fa-solid fa-earth-europe"></i> Wahaan
   </h5></center>
 </div>
- <!-- Service Booking -->
-<section id="booking" class="py-5" data-aos="fade-up">
+<!-- Book Service Section -->
+<section id="booking" class="py-5 bg-black text-light">
   <div class="container">
-    <form>
-      <div class="mb-2">
-        <label for="Your Name"></label>
-        <input type="text" class="form-control" placeholder="Your Name">
-      </div>
-      <div class="mb-4">
-        <label for="Email"></label>
-        <input type="email" class="form-control" placeholder="Your Email">
-      </div>
-      <div class="mb-4">
-        <select class="form-select">
-          <option selected>Select Service</option>
-          <option>Washing </option>
-          <!-- <option>Rental</option> -->
-          <option>Repair</option>
-          <option>Modification</option>
+    <h3 class="text-center mb-5" data-aos="fade-right">
+      Book your Service with <i class="fa-solid fa-earth-europe"></i> Wahaan
+    </h3>
+    <div class="row align-items-center" data-aos="fade-up">
 
-        </select>
+      <!-- Image Side -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="pics/service-booking.jpg" alt="Service Booking" class="img-fluid rounded shadow" />
       </div>
-      <button id="bookNow" class="btn btn-success">Book Now</button>
-    </form>
+
+      <!-- Form Side -->
+      <div class="col-md-6">
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control form-control-lg" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control form-control-lg" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <select class="form-select form-select-lg">
+              <option selected>Select Service</option>
+              <option>Washing</option>
+              <option>Repair</option>
+              <option>Modification</option>
+            </select>
+          </div>
+          <button id="bookNow" class="btn w-100 fs-4">Book Now</button>
+        </form>
+      </div>
+
+    </div>
   </div>
 </section>
 
-    <!-- BLOG SECTION -->
-<!-- 
-    <div class="headhai1 asur" data-aos="fade-right" data-aos-delay="100">
-      <center><h5>
-        Read Latest Blogs on <i class="fa-solid fa-earth-europe"></i> Wahaan
-      </h5></center>
-      <div class="main">
-        <div class="card">
-          <h3>Top 10 Road Trips</h3>
-          <p>
-            Discover scenic highways, must-visit destinations, and hidden gems
-            for your next bike or car adventure.
-          </p>
-          <img  class="image"  src="Pics/travel.png"  alt="Best Road Trips in India"/>
-          <br />
-          <center><button>Read More</button></center>
-        </div>
-
-        <div class="card">
-          <br />
-          <h3>Car Maintenance Tips</h3>
-          <p>
-            Learn essential maintenance tips to keep your car running smoothly
-            and efficiently for years.
-          </p>
-
-          <img
-            class="image"
-            src="Pics/CAR3.png"
-            alt="Car Maintenance Tips"
-          /><br />
-          <center><button>Read More</button></center>
-        </div>
-
-        <div class="card">
-          <h3>Bike Customization</h3>
-          <p>
-            Explore popular and unique modifications to make your bike stand out
-            on the roads.
-          </p>
-          <br />
-          <img class="image" src="Pics/BIKE4.png" alt="Bike Customization Ideas"><br />
-          <center><button>Read More</button></center>
-        </div>
-      </div>
-    </div> -->
 
     <div class="headhai2" data-aos="fade-right" data-aos-delay="100">
        <center> <h5>
@@ -431,7 +400,7 @@
             </p>
             <p><i class="fas fa-phone m-2"></i>+91 98765 43210</p>
             <p><i class="fas fa-envelope m-2"></i>support@wahaan.com</p>
-            <p><i class="fas fa-clock m-2"></i>Mon - Sat: 9 AM - 7 PM</p>
+            <p><i class="fas fa-clock m-2"></i>Mon - Sun :  24 x 7</p>
           </div>
 
           <!-- Newsletter -->
@@ -439,29 +408,16 @@
             <h5>Newsletter</h5>
             <p>Subscribe to get the latest updates and offers.</p>
             <form class="d-flex">
-              <input
-                type="email"
-                class="form-control me-2"
-                placeholder="Your email"
-                required
-              />
+              <input type="email" class="form-control me-2" placeholder="Your email" required/>
               <button type="submit" class="btn btn-danger">Subscribe</button>
             </form>
 
             <!-- Social Media -->
             <div class="mt-3">
-              <a href="#" aria-label="Facebook" class="text-light m-3 fs-5"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" aria-label="Twitter" class="text-light m-3 fs-5"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a href="#" aria-label="Instagram" class="text-light m-3 fs-5"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" aria-label="LinkedIn" class="text-light m-3 fs-5"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
+              <a href="#" aria-label="Facebook" class="text-light m-3 fs-2"  ><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Twitter" class="text-light m-3 fs-2"  ><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram" class="text-light m-3 fs-2"  ><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn" class="text-light m-3 fs-2"  ><i class="fab fa-linkedin-in"></i></a>
             </div>
           </div>
         </div>
@@ -476,7 +432,6 @@
   <script>
     AOS.init();
   </script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script>
   $(document).ready(function() {
 
