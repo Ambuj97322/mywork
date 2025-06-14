@@ -611,6 +611,65 @@ footer a:hover {
   color: #eb1717;
 }
 
+/* Responsive Reviews Section */
+@media (max-width: 1200px) {
+  .review-card {
+    width: 380px;
+    height: auto;
+  }
+  .review-card img {
+    height: 320px;
+  }
+}
+
+@media (max-width: 992px) {
+  #reviews {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+  }
+  .review-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .review-card {
+    width: 90%;
+    margin-bottom: 24px;
+  }
+  .review-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  #reviews {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .review-section {
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+  .review-card {
+    width: 100%;
+    min-width: unset;
+    border-radius: 16px;
+    padding: 8px;
+  }
+  .review-card img {
+    height: 160px;
+  }
+  .review-card h4 {
+    font-size: 22px;
+  }
+  .review-card p {
+    font-size: 15px;
+    padding-bottom: 10px;
+  }
+}
 /* Laptop Responsiveness */
 
 
