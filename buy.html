@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
       * {
@@ -67,6 +67,79 @@
         color: #fff;
         transform: scale(1.09);
       }
+
+           .section-title {
+        font-size: 2.2rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 2px 8px #00000044;
+      }
+      .text-gradient {
+        background: linear-gradient(90deg, #fd0d0d, #fff, #232526);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .car-card {
+        background: linear-gradient(120deg, #232526 0%, #414345 100%);
+        border-radius: 1.2rem;
+        transition: transform 0.2s, box-shadow 0.2s;
+        cursor: pointer;
+        min-height: 350px;
+      }
+      .car-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px 0 rgba(253,13,13,0.25);
+      }
+      .car-img {
+        height: 220px;
+        object-fit: cover;
+        border-top-left-radius: 1.2rem;
+        border-top-right-radius: 1.2rem;
+        transition: filter 0.3s;
+      }
+      .car-card:hover .car-img {
+        filter: brightness(0.7) blur(1px);
+      }
+      .car-hover-details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(30,30,30,0.93);
+        color: #fff;
+        opacity: 0;
+        transition: opacity 0.3s;
+        padding: 2rem 1rem 1rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        z-index: 2;
+      }
+      .car-card:hover .car-hover-details {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .car-hover-details ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem 0;
+        text-align: left;
+      }
+      .car-hover-details li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      @media (max-width: 991px) {
+        .car-img { height: 160px; }
+        .car-card { min-height: 280px; }
+        .car-hover-details { padding: 1rem 0.5rem; }
+      }
+      
     </style>
   </head>
   <body>
@@ -106,8 +179,251 @@
       </div>
     </nav>
 
-    <!-- Page Content (to be filled later) -->
+    <!-- New Cars Section -->
+    <section class="container py-5 " data-aos="fade-up">
+      <h2 class="section-title text-center mb-4 mt-5 text-gradient">🚗 New Cars</h2>
+      <div class="row g-4" id="newCars">
+        <!-- New car cards will be injected here -->
+      </div>
+    </section>
 
+    <!-- Used Cars Section -->
+    <section class="container pb-5" data-aos="fade-up">
+      <h2 class="section-title text-center mb-4 text-gradient">🚙 Used Cars</h2>
+      <div class="row g-4" id="usedCars">
+        <!-- Used car cards will be injected here -->
+      </div>
+    </section>
+
+    <!-- Limited Offer Section -->
+    <section class="container py-5" data-aos="zoom-in">
+      <div class="bg-gradient p-4 rounded-4 text-center shadow" style="background: linear-gradient(90deg, #fd0d0d, #1e1e1e);">
+        <h2 class="fw-bold mb-2 text-white">🔥 Limited Time Offer!</h2>
+        <p class="mb-3 text-light fs-5">Get up to <span class="fw-bold text-warning">₹50,000 OFF</span> on select models. Hurry, offer valid till stocks last!</p>
+        <a href="#" class="btn btn-light btn-lg fw-bold">Explore Offers</a>
+      </div>
+    </section>
+
+    <!-- Suggestions Section -->
+    <section class="container py-4" data-aos="fade-right">
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-info d-flex align-items-center" role="alert">
+            <i class="fas fa-lightbulb me-2 fs-4"></i>
+            <div>
+              <strong>Suggestions for you:</strong>
+              <ul class="mb-0">
+                <li>Compare cars before buying to get the best deal.</li>
+                <li>Check vehicle history for used cars.</li>
+                <li>Book a test drive for a better experience.</li>
+                <li>Look for certified pre-owned vehicles for extra assurance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Slider Section -->
+    <section class="container py-5" data-aos="fade-up">
+      <h3 class="mb-4 text-center text-gradient">Customer Reviews</h3>
+      <div id="reviewSlider" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="reviewsCarousel">
+          <!-- Reviews will be injected here -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewSlider" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewSlider" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    
+    <script>
+      // Car data
+      const cars = [
+        {
+          name: "Toyota Fortuner",
+          brand: "Toyota",
+          price: 3200000,
+          condition: "New",
+          img: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600",
+          details: [
+            "Automatic Transmission",
+            "Diesel",
+            "2024 Model",
+            "0 km Driven",
+            "5 Years Warranty"
+          ],
+          badge: "New"
+        },
+        {
+          name: "Hyundai Creta",
+          brand: "Hyundai",
+          price: 1500000,
+          condition: "New",
+          img: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600",
+          details: [
+            "Automatic Transmission",
+            "Petrol",
+            "2024 Model",
+            "0 km Driven",
+            "3 Years Warranty"
+          ],
+          badge: "New"
+        },
+        {
+          name: "Honda City",
+          brand: "Honda",
+          price: 950000,
+          condition: "Used",
+          img: "https://images.pexels.com/photos/170782/pexels-photo-170782.jpeg?auto=compress&w=600",
+          details: [
+            "Manual Transmission",
+            "Petrol",
+            "2019 Model",
+            "32,000 km Driven",
+            "1 Year Warranty"
+          ],
+          badge: "Used"
+        },
+        {
+          name: "Tata Nexon",
+          brand: "Tata",
+          price: 800000,
+          condition: "Used",
+          img: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600",
+          details: [
+            "Manual Transmission",
+            "Diesel",
+            "2020 Model",
+            "18,000 km Driven",
+            "6 Months Warranty"
+          ],
+          badge: "Used"
+        },
+        {
+          name: "Hyundai i20",
+          brand: "Hyundai",
+          price: 1100000,
+          condition: "New",
+          img: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600",
+          details: [
+            "Automatic Transmission",
+            "Petrol",
+            "2024 Model",
+            "0 km Driven",
+            "2 Years Warranty"
+          ],
+          badge: "New"
+        },
+        {
+          name: "Tata Altroz",
+          brand: "Tata",
+          price: 700000,
+          condition: "Used",
+          img: "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&w=600",
+          details: [
+            "Manual Transmission",
+            "Petrol",
+            "2018 Model",
+            "40,000 km Driven",
+            "6 Months Warranty"
+          ],
+          badge: "Used"
+        }
+      ];
+
+      // Reviews data
+      const reviews = [
+        {
+          text: '"Amazing service! Got my dream car at a great price. Highly recommended."',
+          user: "Rohit Sinha",
+          img: "https://randomuser.me/api/portraits/men/32.jpg",
+          rating: "5.0"
+        },
+        {
+          text: '"The filter options made it so easy to find the perfect car for my family."',
+          user: "Priya Verma",
+          img: "https://randomuser.me/api/portraits/women/44.jpg",
+          rating: "4.8"
+        },
+        {
+          text: '"Quick response and transparent process. Will buy again from Wahaan!"',
+          user: "Arjun Mehta",
+          img: "https://randomuser.me/api/portraits/men/65.jpg",
+          rating: "4.9"
+        }
+      ];
+
+      // Render car cards (3 per row)
+      function renderCarSection(selector, carsArr) {
+        let html = "";
+        for (let i = 0; i < carsArr.length; i += 3) {
+          html += '<div class="row g-4 mb-2">';
+          for (let j = i; j < i + 3 && j < carsArr.length; j++) {
+            const car = carsArr[j];
+            html += `
+              <div class="col-12 col-md-4">
+                <div class="card car-card h-100 shadow-lg border-0 position-relative overflow-hidden">
+                  <img src="${car.img}" class="card-img-top car-img" alt="${car.name}">
+                  <div class="card-body">
+                    <h5 class="card-title">${car.name}</h5>
+                    <p class="card-text mb-1"><strong>Brand:</strong> ${car.brand}</p>
+                    <p class="card-text mb-1"><strong>Price:</strong> ₹${car.price.toLocaleString()}</p>
+                    <p class="card-text mb-1"><strong>Condition:</strong> ${car.condition}</p>
+                  </div>
+                  <div class="car-hover-details">
+                    <ul>
+                      ${car.details.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                    <a href="#" class="btn btn-outline-light mt-2">View Details</a>
+                  </div>
+                  <span class="badge ${car.badge === 'New' ? 'bg-success' : 'bg-warning text-dark'} position-absolute top-0 end-0 m-2">${car.badge}</span>
+                </div>
+              </div>
+            `;
+          }
+          html += '</div>';
+        }
+        $(selector).html(html);
+      }
+
+      // Render reviews as carousel items
+      function renderReviews() {
+        let html = "";
+        $.each(reviews, function(i, review) {
+          html += `
+            <div class="carousel-item${i === 0 ? ' active' : ''}">
+              <div class="card bg-dark text-light h-100 shadow mx-auto" style="max-width: 400px;">
+                <div class="card-body">
+                  <p class="card-text">${review.text}</p>
+                  <div class="d-flex align-items-center mt-3">
+                    <img src="${review.img}" alt="User" class="rounded-circle me-2" width="40" height="40">
+                    <div>
+                      <strong>${review.user}</strong><br>
+                      <span class="text-warning"><i class="fas fa-star"></i> ${review.rating}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+        $("#reviewsCarousel").html(html);
+      }
+
+      $(function() {
+        // Separate new and used cars
+        const newCars = cars.filter(c => c.condition === "New");
+        const usedCars = cars.filter(c => c.condition === "Used");
+        renderCarSection("#newCars", newCars);
+        renderCarSection("#usedCars", usedCars);
+        renderReviews();
+      });
+    </script>
   <!-- Floating Customer Care Button -->
     <button class="chat-button">
       <i class="fas fa-headset"></i> Chat Support
