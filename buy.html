@@ -1,139 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buy - Wahaan</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="icon" href="favicon.png" type="image/png" />
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        color: #f0f0f0;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-      }
-      body {
-        font-size: 1rem;
-        background: linear-gradient(60deg, #0f0f0f, #1e1e1e, #ff0000);
-      }
-      .head {
-        position: fixed;
-        top: 10px;
-        left: 290px;
-        color: #ffffff;
-        font-size: 35px;
-        font-weight: bold;
-        z-index: 10;
-      }
-      nav {
-        background: linear-gradient(200deg, #0f0f0f, #1e1e1e, #ff0000);
-        position: fixed !important;
-        width: 100%;
-        z-index: 9;
-      }
-      .navbar-brand {
-        font-weight: bold;
-        font-size: 29px;
-        color: #ffffff !important;
-      }
-      .nav-link {
-        color: #fdfdfd;
-        font-weight: 600;
-        margin-right: 15px;
-        transition: all 0.3s ease-in-out;
-      }
-      .nav-link:hover {
-        color: #fd0d0d;
-        text-decoration: underline;
-      }
-      .dropdown-menu {
-        animation: fadeIn 0.3s ease-in-out;
-      }
-      .btn-outline-primary {
-        background-color: #fd0d0d;
-        transition: all 0.3s ease;
-        color: #fff;
-        font-weight: 800;
-      }
-      .btn-outline-primary:hover {
-        background-color: #fd0d0d;
-        border: none;
-        color: #fff;
-        transform: scale(1.09);
-      }
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Buy - Wahaan</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- <link rel="stylesheet" href="style.css" /> -->
+<link rel="icon" href="favicon.png" type="image/png" />
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #f0f0f0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  font-size: 1rem;
+  background: linear-gradient(60deg, #0f0f0f, #1e1e1e, #ff0000);
+}
+.head {
+  position: fixed;
+  top: 10px;
+  left: 290px;
+  color: #ffffff;
+  font-size: 35px;
+  font-weight: bold;
+  z-index: 10;
+}
+nav {
+  background: linear-gradient(200deg, #0f0f0f, #1e1e1e, #ff0000);
+  position: fixed !important;
+  width: 100%;
+  z-index: 9;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 29px;
+  color: #ffffff !important;
+}
+.nav-link {
+  color: #fdfdfd;
+  font-weight: 600;
+  margin-right: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.nav-link:hover {
+  color: #fd0d0d;
+  text-decoration: underline;
+}
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out;
+}
+.btn-outline-primary {
+  background-color: #fd0d0d;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 800;
+}
+.btn-outline-primary:hover {
+  background-color: #fd0d0d;
+  border: none;
+  color: #fff;
+  transform: scale(1.09);
 
-           .section-title {
-        font-size: 2.2rem;
-        font-weight: 800;
-        letter-spacing: 1px;
-        margin-bottom: 1.5rem;
-        text-shadow: 0 2px 8px #00000044;
-      }
-      .text-gradient {
-        background: linear-gradient(90deg, #fd0d0d, #fff, #232526);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      .car-card {
-        background: linear-gradient(120deg, #232526 0%, #414345 100%);
-        border-radius: 1.2rem;
-        transition: transform 0.2s, box-shadow 0.2s;
-        cursor: pointer;
-        min-height: 350px;
-      }
-      .car-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 8px 32px 0 rgba(253,13,13,0.25);
-      }
-      .car-img {
-        height: 220px;
-        object-fit: cover;
-        border-top-left-radius: 1.2rem;
-        border-top-right-radius: 1.2rem;
-        transition: filter 0.3s;
-      }
-      .car-card:hover .car-img {
-        filter: brightness(0.7) blur(1px);
-      }
-      .car-hover-details {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(30,30,30,0.93);
-        color: #fff;
-        opacity: 0;
-        transition: opacity 0.3s;
-        padding: 2rem 1rem 1rem 1rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        pointer-events: none;
-        z-index: 2;
-      }
-      .car-card:hover .car-hover-details {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .car-hover-details ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 1rem 0;
-        text-align: left;
-      }
-      .car-hover-details li {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-      }
+     .section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px #00000044;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #fd0d0d, #fff, #232526);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.car-card {
+  background: linear-gradient(120deg, #232526 0%, #414345 100%);
+  border-radius: 1.2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  min-height: 350px;
+}
+.car-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(253,13,13,0.25);
+}
+.car-img {
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  transition: filter 0.3s;
+}
+.car-card:hover .car-img {
+  filter: brightness(0.7) blur(1px);
+}
+.car-hover-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30,30,30,0.93);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  padding: 2rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.car-card:hover .car-hover-details {
+  opacity: 1;
+  pointer-events: auto;
+}
+.car-hover-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: left;
+}
+.car-hover-details li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.chat-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #2b47fd;
+  color: white;
+  padding: 19px 36px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(108, 101, 245, 0.5);
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 1050;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chat-button:hover {
+  background-color: #2d22f7;
+  transform: scale(1.05);
+}
+
       @media (max-width: 991px) {
         .car-img { height: 160px; }
         .car-card { min-height: 280px; }
@@ -507,4 +528,3 @@
 </script>
 </body>
 </html>
-

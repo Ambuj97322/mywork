@@ -71,8 +71,8 @@ nav {
   color: rgb(253, 205, 137);
   text-shadow: 30px 17px 18px rgba(0, 0, 0, 0.757);
   font-weight: bold;
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 7rem;
+  padding-bottom: 1rem;
 }
 .main {
   display: flex;
@@ -154,6 +154,15 @@ nav {
   background: #d63333;
 }
 
+/* OFFER SECTION  */
+ .offer-section {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  }
+  .timer-box {
+    min-width: 260px;
+    border: 2px solid #ffd700;
+    background: rgba(30,30,30,0.95);
+  }
 /* Search buy section  */
 
 
@@ -240,14 +249,14 @@ nav {
   background-color: #fff;
 }
 
-.headhai2 h5 {
+/* .headhai2 h5 {
   font-size: 60px;
   color: #ffd17e;
   text-shadow: 5px 5px 12px rgba(0, 0, 0, 0.6);
   font-weight: bold;
   padding-top: 80px;
   padding-bottom: 30px;
-}
+} */
 
 /*  Sell Section */
 #sellNowBtn {
@@ -280,8 +289,8 @@ nav {
   color: rgb(239, 150, 132);
   text-shadow: 30px 17px 20px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  padding-top: 90px;
-  padding-bottom: 30px;
+  padding-top: 5rem;
+  padding-bottom: 1rem;
 }
 
 .bike-card-container {
@@ -779,4 +788,11 @@ footer a:hover {
     margin-left: 0;
     padding-top: 60px;
   }
+    .offer-section .row {
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .timer-box {
+      margin-bottom: 2rem;
+    }
 }
