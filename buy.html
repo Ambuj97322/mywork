@@ -66,8 +66,9 @@ nav {
   border: none;
   color: #fff;
   transform: scale(1.09);
+}
 
-     .section-title {
+.section-title {
   font-size: 2.2rem;
   font-weight: 800;
   letter-spacing: 1px;
@@ -437,7 +438,7 @@ nav {
       }
 
       $(function() {
-        // Separate new and used cars
+       
         const newCars = cars.filter(c => c.condition === "New");
         const usedCars = cars.filter(c => c.condition === "Used");
         renderCarSection("#newCars", newCars);
