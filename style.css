@@ -391,7 +391,7 @@ nav {
 
 
 .card {
-  /* background-color: #1d1c1c !important; */
+  background-color: #1d1c1c !important;
   border-radius: 12px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
