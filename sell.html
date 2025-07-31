@@ -1,152 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buy - Wahaan</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="favicon.png" type="image/png" />
- 
-  </head>
-  <body>
-    <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html"><i class="fas fa-earth-europe"></i> Wahaan</a>
 
-    <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wahaan - Sell Vehicle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #eef2f7;
+    }
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
+    .page-header {
+      background: linear-gradient(90deg, #f80f0f, #ff0202);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+    }
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sell.html">Sell </a></li>
-            <li><a class="dropdown-item" href="buy.html">Buy </a></li>
-            <li><a class="dropdown-item" href="repairs.html">Repairs & Maintenance</a></li>
-            <li><a class="dropdown-item" href="modification.html">Custom Modification</a></li>
-          
-          </ul>
-        </li>
+    .page-header h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicles</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
-            <li><a class="dropdown-item" href="cars.html">Car</a></li>
-            <li><a class="dropdown-item" href="ev.html">EV</a></li>
-          </ul>
-        </li>
+    .sell-form {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      margin-bottom: 50px;
+    }
 
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
-        </li>
+    .form-label {
+      font-weight: 600;
+    }
 
-        <li class="nav-item">
-          <a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i class="fas fa-user"></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    .form-control {
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 16px;
+    }
 
+    .btn-submit {
+      background: #ff0000;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      border: none;
+      transition: 0.3s ease;
+    }
 
+    .btn-submit:hover {
+      background: #0f3af8;
+    }
+  </style>
+</head>
 
-
-
-  <!-- Floating Customer Care Button -->
-    <button class="chat-button">
-      <i class="fas fa-headset"></i> Chat Support
-    </button>
-
-    <!-- Footer  -->
-    <footer class="bg-dark text-light pt-5 pb-4">
-      <div class="container">
-        <div class="row">
-          <!-- About -->
-          <div class="col-md-4 mb-4" id="footerheader">
-            <h5>About Wahaan</h5>
-            <p>
-              Your trusted platform for bikes, cars, rentals, insurance,
-              maintenance, and more. We bring the best vehicles and services to
-              your doorstep.
-            </p>
-          </div>
-
-          <!-- Quick Links -->
-          <div class="col-md-2 mb-4 display-none" id="footerheader">
-            <h5>Quick Links</h5>
-            <ul class="list-unstyled">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#vehicles">Vehicles</a></li>
-              <li><a href="#reviews">Reviews</a></li>
-              <li><a href="#contact">Contact</a></li>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm" data-aos="fade-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html"><i class="fas fa-earth-europe"></i> Wahaan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="sell.html">Sell</a></li>
+              <li><a class="dropdown-item" href="buy.html">Buy</a></li>
+              <li><a class="dropdown-item" href="repairs.html">Repairs & Maintenance</a></li>
+              <li><a class="dropdown-item" href="modification.html">Custom Modification</a></li>
             </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vehicles</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="bikes.html">Bike</a></li>
+              <li><a class="dropdown-item" href="cars.html">Car</a></li>
+              <li><a class="dropdown-item" href="ev.html">EV</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="btn btn-outline-primary" href="login.html">Login / Sign Up <i class="fas fa-user"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header" data-aos="fade-down" style="padding-top: 150px;">
+    <h1>Sell Your Vehicle</h1>
+    <p>List your vehicle and reach potential buyers easily.</p>
+  </header>
+
+  <!-- Sell Form Section -->
+  <section class="container">
+    <div class="sell-form" data-aos="fade-up">
+      <form action="/submit_sell_form" method="POST" enctype="multipart/form-data">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="name" class="form-label" style="color:black">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
           </div>
-
-          <!-- Contact Info -->
-          <div class="col-md-3 mb-4" id="footerheader">
-            <h5>Contact Us</h5>
-            <p>
-              <i class="fas fa-map-marker-alt me-2"></i>Near Real Value, Kokar,
-              Ranchi(Jharkhand), India
-            </p>
-            <p><i class="fas fa-phone m-2"></i>+91 98765 43210</p>
-            <p><i class="fas fa-envelope m-2"></i>support@wahaan.com</p>
-            <p><i class="fas fa-clock m-2"></i>Mon - Sun :  24 x 7</p>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="col-md-3 mb-4" id="footerheader">
-            <h5>Newsletter</h5>
-            <p>Subscribe to get the latest updates and offers.</p>
-            <form class="d-flex">
-              <input type="email" class="form-control me-2" placeholder="Your email" required/>
-              <button type="submit" class="btn btn-danger">Subscribe</button>
-            </form>
-
-            <!-- Social Media -->
-            <div class="mt-3">
-              <a href="#" aria-label="Facebook" class="text-light m-3 fs-2"  ><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Twitter" class="text-light m-3 fs-2"  ><i class="fab fa-twitter"></i></a>
-              <a href="#" aria-label="Instagram" class="text-light m-3 fs-2"  ><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="LinkedIn" class="text-light m-3 fs-2"  ><i class="fab fa-linkedin-in"></i></a>
-            </div>
+          <div class="col-md-6">
+            <label for="contact" class="form-label" style="color:black">Contact Number</label>
+            <input type="tel" class="form-control" id="contact" name="contact" required>
           </div>
         </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="vehicle" class="form-label" style="color:black">Vehicle Model</label>
+            <input type="text" class="form-control" id="vehicle" name="vehicle" required>
+          </div>
+          <div class="col-md-6">
+            <label for="year" class="form-label" style="color:black">Year of Purchase</label>
+            <input type="number" class="form-control" id="year" name="year" required>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="price" class="form-label" style="color:black">Expected Price (INR)</label>
+            <input type="number" class="form-control" id="price" name="price" required>
+          </div>
+          <div class="col-md-6">
+            <label for="image" class="form-label" style="color:black">Upload Vehicle Image</label>
+            <input type="file" class="form-control" id="image" name="image" required>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="desc" class="form-label" style="color:black">Additional Description</label>
+          <textarea class="form-control" id="desc" name="desc" rows="4" placeholder="Mention condition, mileage, etc..."></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-submit">Submit for Listing</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
-        <hr />
-        <div class="text-center">Wahaan. Developed by Asur <></div>
+  <!-- Footer -->
+  <footer class="bg-dark text-light">
+    <div class="container mb-0">
+      <div class="row">
+        <div class="col-md-4 mb-4" id="footerheader">
+          <h5>About Wahaan</h5>
+          <p>Your trusted platform for bikes, cars, rentals, insurance, maintenance, and more.</p>
+        </div>
+        <div class="col-md-2 mb-4 display-none" id="footerheader">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 mb-4" id="footerheader">
+          <h5>Contact Us</h5>
+          <p><i class="fas fa-map-marker-alt me-2"></i>Near Real Value, Kokar, Ranchi, India</p>
+          <p><i class="fas fa-phone m-2"></i>+91 98765 43210</p>
+          <p><i class="fas fa-envelope m-2"></i>support@wahaan.com</p>
+          <p><i class="fas fa-clock m-2"></i>Mon - Sun : 24 x 7</p>
+        </div>
+        <div class="col-md-3 mb-4" id="footerheader">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get the latest updates and offers.</p>
+          <form class="d-flex">
+            <input type="email" class="form-control me-2" placeholder="Your email" required />
+            <button type="submit" class="btn btn-danger">Subscribe</button>
+          </form>
+          <div class="mt-3">
+            <a href="#" class="text-light m-3 fs-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-light m-3 fs-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-light m-3 fs-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-light m-3 fs-2"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
       </div>
-    </footer>
+      <hr />
+      <div class="text-center">Wahaan. Developed by Asur <></div>
+    </div>
+  </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-<script>
-  $(document).ready(function() {
-
-      // Chat button functionality
-      $('.chat-button').on('click', function () {
-        alert('Chat support is currently unavailable.');
-      });
-  });
-</script>
 </body>
-</html>
 
+</html>
